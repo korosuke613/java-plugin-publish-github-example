@@ -17,8 +17,6 @@ jobs:
       - name: Upload coverage
         uses: codecov/codecov-action@v1
         with:
-          token: ${{ secrets.CODECOV_TOKEN }} #required
-          file: ./build/customJacocoReportDir/test/jacocoTestReport.xml #optional
-          flags: unittests #optional
-          #name: codecov-umbrella #optional
-          #yml: ./codecov.yml #optional
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./build/customJacocoReportDir/test/jacocoTestReport.xml
+          flags: unittests

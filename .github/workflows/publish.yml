@@ -14,12 +14,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Get the version
+      - name: Get the version  # タグ名を保存する
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: Publish
         env:
-          GITHUB_PACKAGE_USERNAME: korosuke613
-          GITHUB_PACKAGE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GRADLE_PUBLISH_VERSION: ${{ steps.get_version.outputs.VERSION }}
+          GITHUB_PACKAGE_USERNAME: korosuke613  # ユーザー名
+          GITHUB_PACKAGE_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # トークン
+          GRADLE_PUBLISH_VERSION: ${{ steps.get_version.outputs.VERSION }} # タグ名
         run: ./gradlew publish
