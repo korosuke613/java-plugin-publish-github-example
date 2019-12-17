@@ -1,4 +1,4 @@
-package com.github.korosuke613.publishExample;
+package com.github.korosuke613.example.publish;
 
 import java.util.ArrayList;
 
