@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.korosuke613'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+}
+
+test{
+    useJUnitPlatform()
+}
