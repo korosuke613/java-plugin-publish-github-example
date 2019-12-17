@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "maven-publish"  // 公開に必要なプラグイン
+    id "jacoco"  // テストカバレッジ計測プラグイン
 }
 
 group 'com.github.korosuke613'
@@ -39,5 +40,20 @@ publishing {
         gpr(MavenPublication) {
             from(components.java)
         }
+    }
+}
+
+
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.enabled false
     }
 }
