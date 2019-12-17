@@ -1,4 +1,4 @@
-package com.github.korosuke613.example.publish;
+package test.korosuke613.example.publish;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

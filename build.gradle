@@ -4,7 +4,7 @@ plugins {
     id "jacoco"  // テストカバレッジ計測プラグイン
 }
 
-group 'com.github.korosuke613'
+group 'test.korosuke613'
 
 // GitHub Action上でタグ名がバージョンとなる
 version = System.getenv("GRADLE_PUBLISH_VERSION") ?: "1.0-SNAPSHOT"
